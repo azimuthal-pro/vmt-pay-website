@@ -1,0 +1,76 @@
+.bodyCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    height: 80vh;
+    width: 100vw;
+    text-align: left;
+    gap: 40px;
+
+}
+
+.textSect {
+    flex: 1;
+    max-width: 600px;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+
+}
+
+.payment{
+    color: #25d88dde;
+}
+
+.subHeading {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+
+.signupBtn {
+    background-color: #0070f3;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.signupBtn:hover{
+    background-color: #555;
+}
+
+
+.imageSect{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.offerSect{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.offerHead{
+    font-size:2rem;
+    font-weight: bold;
+    margin-bottom:30px;
+}

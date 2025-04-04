@@ -1,0 +1,46 @@
+.navbar{
+    width: 100%;
+    background-color: #25d88dde;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.vmt{
+    color: #0070f3;
+}
+
+.headline{
+    font-size: 1.2rem;
+    text-align: center;
+    flex: 1;
+    color:black
+}
+
+
+.loginBtn{
+    background-color: white;
+    color: #0070f3;
+    padding: 8px 15px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-size: 20;
+    border-radius: 20;
+}
+
+.loginBtn:hover {
+    background-color: #e0e0e0d2;
+  }
