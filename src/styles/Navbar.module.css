@@ -1,6 +1,6 @@
 .navbar{
     width: 100%;
-    background-color: #25d88dde;
+    background-color: #262161;
     color: white;
     display: flex;
     align-items: center;
@@ -26,7 +26,8 @@
     font-size: 1.2rem;
     text-align: center;
     flex: 1;
-    color:black
+    color:#24B8EE;
+    ;
 }
 
 

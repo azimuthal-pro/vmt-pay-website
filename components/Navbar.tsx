@@ -1,13 +1,25 @@
-import React from 'react'
+'use client';
+import React from 'react';
 import styles from '@/styles/Navbar.module.css';
+import { useRouter } from 'next/navigation';
 
 
-const Navbar: React.FC = () => {
+const Navbar =  () => {
+
+  const router = useRouter();
+
+  const handleLoginClick = () => {
+    router.push('/login');
+  }
   return (
    <nav className= {styles.navbar}>
-    <div className={styles.logo}><span className={styles.vmt}>Vmt</span>PAY</div>
-    <div className={styles.headline}>Secure and Fast Financial Tansactions</div>
-    <button className={styles.loginBtn}>Login</button>
+    {/* <div className={styles.logo}><span className={styles.vmt}>Vmt</span>PAY</div> */}
+
+    <div className={styles.log}><img src="/vmt-logo.jpg" alt="Logo" width="50" height="50" /></div>
+    <div className={styles.headline}>Secure and Fast Financial Transactions</div>
+    <button className={styles.loginBtn} onClick={handleLoginClick}>
+      Login
+    </button>
    </nav>
   )
 }

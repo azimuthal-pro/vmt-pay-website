@@ -1,7 +1,19 @@
+'use client'
 import React from 'react';
 import styles from '@/styles/Body.module.css';
+import { useRouter } from 'next/navigation'; 
 import Image from 'next/image';
+
+
 const Body: React.FC = () => {
+
+    const router = useRouter();
+
+    const singupClickHandler = () =>{
+        router.push('/signup')
+        //router.push('@/app/signup/signupPage')
+    }
+
     return (
         <section className={styles.bodyCont}>
             <div className={styles.textSect}>
@@ -13,7 +25,7 @@ const Body: React.FC = () => {
                     VmtPay is the latest and fastest gateway to all kinds of payment across the world
                 </p>
 
-                <button className={styles.signupBtn}>Sign Up</button>
+                <button className={styles.signupBtn} onClick={singupClickHandler}>Sign Up</button>
             </div>
 
             <div className={styles.imageSect}>
