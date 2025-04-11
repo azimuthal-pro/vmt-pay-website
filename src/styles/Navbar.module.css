@@ -18,10 +18,6 @@
     font-weight: bold;
 }
 
-.vmt{
-    color: #0070f3;
-}
-
 .headline{
     font-size: 1.2rem;
     text-align: center;
@@ -40,6 +36,7 @@
     cursor: pointer;
     font-size: 20;
     border-radius: 20;
+    margin-right: 50;
 }
 
 .loginBtn:hover {

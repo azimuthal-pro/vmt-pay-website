@@ -22,7 +22,7 @@ const Body: React.FC = () => {
                     <p>Without Boundaries </p>
                 </h2>
                 <p className={styles.subHeading}>
-                    VmtPay is the latest and fastest gateway to all kinds of payment across the world
+                    VMTpay is the latest and fastest gateway to all kinds of payment across the world
                 </p>
 
                 <button className={styles.signupBtn} onClick={singupClickHandler}>Sign Up</button>

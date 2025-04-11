@@ -1,49 +1,60 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import AppWrapper from "../../components/AppWrapper";
+'use client';
+import React from 'react';
+import { usePathname } from 'next/navigation';
+import Navbar from '../../components/Navbar'; // Adjust path if needed
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  // Define paths where you want to HIDE the Navbar
+  const hideNavbarPaths = ['/login', '/signup'];
 
-export const metadata: Metadata = {
-  title: "VmtPAY",
-  description: "A Fintech App for Fast Transactions",
+  const shouldShowNavbar = !hideNavbarPaths.includes(pathname);
+
+  return (
+
+    <html lang='en'>
+      <body>
+        {shouldShowNavbar && <Navbar />}
+        <main>{children}</main>
+      </body>
+    </html>
+
+  );
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <AppWrapper>{children}</AppWrapper>
+export default Layout;
 
 
 
-      </body>
-
-    </html>
-  );
-}
 
 
-// 'use client';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
-// import Navbar from "../../components/Navbar";
-// import { usePathname } from 'next/navigation';
+// import AppWrapper from "../../components/AppWrapper";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -56,8 +67,8 @@ export default function RootLayout({
 // });
 
 // export const metadata: Metadata = {
-//   title: "VmtPAY",
-//   description: "Travel UI/UX App for Camping",
+//   title: "VMTpay",
+//   description: "A Fintech App for Fast Transactions",
 // };
 
 // export default function RootLayout({
@@ -65,17 +76,17 @@ export default function RootLayout({
 // }: Readonly<{
 //   children: React.ReactNode;
 // }>) {
-//   const pathname = usePathname();
-//   const hideNavbar = pathname === "/signup"; // Add more routes if needed
-
 //   return (
 //     <html lang="en">
 //       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-//         {!hideNavbar && <Navbar />}
-//         <main style={{ paddingTop: !hideNavbar ? "80px" : "0px" }} className="relative overflow-hidden">
-//           {children}
-//         </main>
+//         <AppWrapper>{children}</AppWrapper>
+
+
+
 //       </body>
+
 //     </html>
 //   );
 // }
+
+

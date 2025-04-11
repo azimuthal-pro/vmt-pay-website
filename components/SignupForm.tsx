@@ -1,4 +1,6 @@
 'use client'
+import {   useRouter } from 'next/navigation';
+import Swal from 'sweetalert2';
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 import React, { useState } from 'react';
@@ -15,6 +17,8 @@ const SignupForm = () => {
         phoneNumber: "",
         agreeToTerms: false,
     });
+
+    const router = useRouter();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value, } = e.target;
@@ -33,9 +37,47 @@ const SignupForm = () => {
         }));
     };
 
+    const isFormValid = () => {
+        return (
+            formData.fullName.trim() !== "" &&
+            formData.email.trim() !== "" &&
+            formData.password.trim() !== "" &&
+            formData.confirmPassword.trim() !== "" &&
+            formData.phoneNumber.trim() !== "" &&
+            formData.password === formData.confirmPassword &&
+            formData.agreeToTerms
+        );
+    };
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (isFormValid()) {
+            Swal.fire({
+                title: 'Sign up successful',
+                text: 'Welcome to VMTpay',
+                icon: 'success',
+                confirmButtonText: 'Continue',
+
+            }).then(() => {
+                router.push('/login')
+            });
+
+        }
+
+        setFormData({
+            fullName:"",
+            email:"",
+            password:"",
+            confirmPassword:"",
+            phoneNumber:"",
+            agreeToTerms:false,
+
+        })
+
+
     };
+
 
     return (
         <div className={styles.cont}>
@@ -95,16 +137,16 @@ const SignupForm = () => {
 
                 <div className={styles.formGroup}>
                     <label htmlFor="phone">Mobile Number</label>
-                    <PhoneInput 
-                    country={'gh'}
-                    value={formData.phoneNumber}
-                    onChange={(phone) => setFormData({ ...formData, phoneNumber: phone})}
-                    inputStyle={{ width: '100%' }}
-                    inputProps={{
-                        name: 'phone',
-                        required : true,
-                    }}
-                     />
+                    <PhoneInput
+                        country={'gh'}
+                        value={formData.phoneNumber}
+                        onChange={(phone) => setFormData({ ...formData, phoneNumber: phone })}
+                        inputStyle={{ width: '100%' }}
+                        inputProps={{
+                            name: 'phone',
+                            required: true,
+                        }}
+                    />
 
 
 
@@ -120,10 +162,14 @@ const SignupForm = () => {
                             onChange={handleCheckboxChange}
                             required
                         />
-                         <span className={styles.terms}>I agree to  Terms and Conditions</span>
+                        <span className={styles.terms}>I agree to  Terms and Conditions</span>
                     </label>
                 </div>
-                <button type="submit" className={styles.submitBtn}>
+                <button
+                    type="submit"
+                    className={styles.submitBtn}
+                    disabled={!isFormValid()}
+                >
                     Sign Up
                 </button>
             </form>
