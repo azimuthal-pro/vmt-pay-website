@@ -4,7 +4,7 @@ import styles from '@/styles/Navbar.module.css';
 import { useRouter } from 'next/navigation';
 
 
-const Navbar =  () => {
+const Navbar = () => {
 
   const router = useRouter();
 
@@ -12,15 +12,13 @@ const Navbar =  () => {
     router.push('/login');
   }
   return (
-   <nav className= {styles.navbar}>
-    {/* <div className={styles.logo}><span className={styles.vmt}>Vmt</span>PAY</div> */}
-
-    <div className={styles.log}><img src="/vmt-logo.jpg" alt="Logo" width="50" height="50" /></div>
-    <div className={styles.headline}>Secure and Fast Financial Transactions</div>
-    <button className={styles.loginBtn} onClick={handleLoginClick}>
-      Login
-    </button>
-   </nav>
+    <nav className={styles.navbar}>
+      <div className={styles.log}><img src="/vmt-logo.jpg" alt="Logo" width="50" height="50" /></div>
+      <div className={styles.headline}>Secure and Fast Financial Transactions</div>
+      <button className={styles.loginBtn} onClick={handleLoginClick}>
+        Login
+      </button>
+    </nav>
   )
 }
 

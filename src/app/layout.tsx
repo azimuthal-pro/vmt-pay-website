@@ -1,13 +1,13 @@
 'use client';
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import Navbar from '../../components/Navbar'; // Adjust path if needed
+import Navbar from '../../components/Navbar'; 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   // Define paths where you want to HIDE the Navbar
-  const hideNavbarPaths = ['/login', '/signup'];
+  const hideNavbarPaths = ['/login', '/signup', '/forgotPassword', '/resetPassword'];
 
   const shouldShowNavbar = !hideNavbarPaths.includes(pathname);
 

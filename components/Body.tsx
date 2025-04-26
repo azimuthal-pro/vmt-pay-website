@@ -11,7 +11,6 @@ const Body: React.FC = () => {
 
     const singupClickHandler = () =>{
         router.push('/signup')
-        //router.push('@/app/signup/signupPage')
     }
 
     return (
@@ -25,7 +24,7 @@ const Body: React.FC = () => {
                     VMTpay is the latest and fastest gateway to all kinds of payment across the world
                 </p>
 
-                <button className={styles.signupBtn} onClick={singupClickHandler}>Sign Up</button>
+                <button className={styles.signupBtn} onClick={singupClickHandler}>Create an Account</button>
             </div>
 
             <div className={styles.imageSect}>

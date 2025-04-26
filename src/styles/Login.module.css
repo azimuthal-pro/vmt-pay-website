@@ -1,74 +1,112 @@
 /* login.module.css */
 
 .container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding-top: 60px;
-  }
-  
-  .header {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formGroup {
-    margin-bottom: 16px;
-  }
-  
-  .formGroup label {
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-  
-  .formGroup input {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .submitBtn {
-    padding: 12px;
-    background-color: #24B8EE;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.1rem;
-  }
-  
-  .submitBtn:hover {
-    background-color: #45a049;
-  }
-  
-  .forgotPassword {
-    font-size: 0.9rem;
-    color: #007bff;
-    text-align: center;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  .forgotPassword:hover {
-    text-decoration: underline;
-  }
-  
-
-  .logo{
-    font-size: 2.5rem;
-    font-weight: bold;
-    padding-bottom: 30px;
-    text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
 }
+
+.header {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.formGroup input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submitBtn {
+  padding: 12px;
+  background-color: #24B8EE;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  width: 96%;
+}
+
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+
+.alternative{
+  text-decoration: none;
+  margin-top: 20px;
+  color: gray;
+}
+.alternative a{
+  text-decoration: none;
+  color: #262161;
+  
+}
+
+.alternative a:hover{
+  color: #24B8EE;
+}
+
+.forgetPassword a{
+  color: red;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ffffff;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 
+.submitBtn:disabled {
+  background-color: #24B8EE;
+  cursor: not-allowed;
+} */
