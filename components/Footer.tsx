@@ -13,7 +13,6 @@ const Footer: React.FC = () => {
     <div className={styles.linksSection}>
       <h4>Company</h4>
       <a href="#">About Us</a>
-      <a href="#">Careers</a>
       <a href="#">Blog</a>
     </div>
 

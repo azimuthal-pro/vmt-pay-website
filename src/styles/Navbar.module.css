@@ -42,3 +42,24 @@
 .loginBtn:hover {
     background-color: #e0e0e0d2;
   }
+
+
+  .navLinks {
+    display: none;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .link {
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    margin: 35px;
+    font-size: 20px;
+  }
+  
+  .link:hover {
+    color: #24B8EE;
+  }
+  
